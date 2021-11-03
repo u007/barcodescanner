@@ -11,13 +11,11 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.1+1
   flutter_plugin_android_lifecycle: ^2.0.0-nullsafety
+  barcode_scan: ^3.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_barcode_scanner:
-    path: ../
 
   pedantic: ^1.10.0-nullsafety.3
 
