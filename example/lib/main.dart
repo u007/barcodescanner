@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart' as foundation;
+// import 'package:flutter/foundation.dart' as foundation;
 import 'src/home.dart';
-import 'src/scan.dart';
 import 'Foundation.dart';
 
 void main() => runApp(MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
             primaryColor: CupertinoColors.destructiveRed),
         home: HomePage(
           key: Key('1'),
-          title: "Ios",
+          title: 'Ios',
         ),
       );
     } else {
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.dark(),
         home: HomePage(
           key: Key('1'),
-          title: "Android",
+          title: 'Android',
         ),
       );
     }

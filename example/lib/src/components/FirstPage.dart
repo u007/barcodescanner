@@ -16,7 +16,7 @@ class _FirstPageState extends State<FirstPage> {
         title: Text('First Page'),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go to second page'),
           onPressed: () {
             Navigator.push(

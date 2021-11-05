@@ -16,7 +16,7 @@ class _ThirdPageState extends State<ThirdPage> {
         title: Text('Second Page'),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Go to 1st page'),
           onPressed: () {
             Navigator.push(

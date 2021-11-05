@@ -6,7 +6,6 @@ import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 class ScanPage extends StatefulWidget {
   @override
   ScanPageState createState() => ScanPageState();
@@ -15,9 +14,9 @@ class ScanPage extends StatefulWidget {
 class ScanPageState extends State<ScanPage> {
   ScanResult? scanResult;
 
-  final _flashOnController = TextEditingController(text: "Flash on");
-  final _flashOffController = TextEditingController(text: "Flash off");
-  final _cancelController = TextEditingController(text: "Cancel");
+  final _flashOnController = TextEditingController(text: 'Flash on');
+  final _flashOffController = TextEditingController(text: 'Flash off');
+  final _cancelController = TextEditingController(text: 'Cancel');
 
   var _aspectTolerance = 0.00;
   var _numberOfCameras = 0;
@@ -32,7 +31,7 @@ class ScanPageState extends State<ScanPage> {
 
   @override
   // ignore: type_annotate_public_apis
-  initState() {
+  void initState() {
     super.initState();
 
     Future.delayed(Duration.zero, () async {
@@ -49,19 +48,19 @@ class ScanPageState extends State<ScanPage> {
           child: Column(
             children: <Widget>[
               ListTile(
-                title: Text("Result Type"),
-                subtitle: Text(scanResult?.type?.toString() ?? ""),
+                title: Text('Result Type'),
+                subtitle: Text(scanResult?.type?.toString() ?? ''),
               ),
               ListTile(
-                title: Text("Raw Content"),
-                subtitle: Text(scanResult?.rawContent ?? ""),
+                title: Text('Raw Content'),
+                subtitle: Text(scanResult?.rawContent ?? ''),
               ),
               ListTile(
-                title: Text("Format"),
+                title: Text('Format'),
                 subtitle: Text(scanResult?.format?.toString() ?? ""),
               ),
               ListTile(
-                title: Text("Format note"),
+                title: Text('Format note'),
                 subtitle: Text(scanResult?.formatNote ?? ""),
               ),
             ],

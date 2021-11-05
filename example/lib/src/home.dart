@@ -18,7 +18,7 @@ class HomePage extends StatefulWidget {
 class _MyHomePageState extends State<HomePage> {
   int currentTabIndex = 0;
 
-  onTapped(int index) {
+  void onTapped(int index) {
     setState(() {
       currentTabIndex = index;
     });
@@ -38,24 +38,20 @@ class _MyHomePageState extends State<HomePage> {
             BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.home), label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.search), label: "Scan"),
+                icon: Icon(CupertinoIcons.search), label: 'Scan'),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.person), label: "Profile")
+                icon: Icon(CupertinoIcons.person), label: 'Profile')
           ]),
           tabBuilder: (context, index) {
             switch (index) {
               case 0:
                 return FirstPage();
-                break;
               case 1:
                 return ScanPage();
-                break;
               case 2:
                 return ThirdPage();
-                break;
               default:
                 return FirstPage();
-                break;
             }
           });
     }
@@ -71,11 +67,11 @@ class _MyHomePageState extends State<HomePage> {
             currentIndex: currentTabIndex,
             onTap: onTapped,
             items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.search), label: "Search"),
+                  icon: Icon(Icons.search), label: 'Search'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person), label: "User Info")
+                  icon: Icon(Icons.person), label: 'User Info')
             ]),
       );
     }
