@@ -12,12 +12,14 @@ dependencies:
   cupertino_icons: ^1.0.1+1
   flutter_plugin_android_lifecycle: ^2.0.0-nullsafety
   barcode_scan: ^3.0.1
+  flutter_inappwebview: ^5.3.2
+  url_launcher: ^6.0.12
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  pedantic: ^1.10.0-nullsafety.3
+  lints: ^1.0.1
 
 flutter:
   uses-material-design: true

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:developer' as developer;
 import '../Foundation.dart';
 import 'package:flutter/cupertino.dart';
 import './components/FirstPage.dart';
 import './components/SecondPage.dart';
-import './components/ThirdPage.dart';
+import 'components/WebPage.dart';
 import 'scan.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,8 +27,8 @@ class _MyHomePageState extends State<HomePage> {
 
   List<Widget> tabs = [
     FirstPage(),
-    SecondPage(),
-    ThirdPage(),
+    ScanPage(),
+    WebPage(),
   ];
 
   @override
@@ -43,20 +44,12 @@ class _MyHomePageState extends State<HomePage> {
                 icon: Icon(CupertinoIcons.person), label: 'Profile')
           ]),
           tabBuilder: (context, index) {
-            switch (index) {
-              case 0:
-                return FirstPage();
-              case 1:
-                return ScanPage();
-              case 2:
-                return ThirdPage();
-              default:
-                return FirstPage();
-            }
+            return tabs[index];
           });
     }
     //Android Scafold
     else {
+      developer.log('tab index', name: currentTabIndex.toString());
       return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
@@ -71,7 +64,7 @@ class _MyHomePageState extends State<HomePage> {
               BottomNavigationBarItem(
                   icon: Icon(Icons.search), label: 'Search'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person), label: 'User Info')
+                  icon: Icon(Icons.person), label: 'Profile')
             ]),
       );
     }
